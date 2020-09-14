@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 )
 type PeopleService struct{}
 
@@ -15,9 +16,7 @@ func(s *PeopleService) GetPeopleFromAPI()(peopleList []models.People, err error)
 	request:=models.SalesloftRequest{}
 	url := "https://api.salesloft.com/v2/people.json"
 
-	//TODO: Delete the token, this needs to be loaded from env variable
-	token:="v2_ak_10822_258dd83e53ee5bff2e809d9aaa9d314936a29437bdd24abf7d7297b7aac61f4d"
-
+	token:=os.Getenv("SALESLOFT_TOKEN")
 	// Create a Bearer string by appending string access token
 	bearer := "Bearer " + token
 

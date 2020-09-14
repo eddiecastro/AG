@@ -6,9 +6,6 @@ import (
 	"fmt"
 	"github.com/abnergarcia1/SalesloftEngineeringTest/pkg/salesloft/models"
 	"net/http"
-	//"strconv"
-
-	//"github.com/abnergarcia1/SalesloftEngineeringTest/pkg/salesloft/models"
 	"github.com/abnergarcia1/SalesloftEngineeringTest/pkg/salesloft/services"
 	"github.com/gorilla/mux"
 )
